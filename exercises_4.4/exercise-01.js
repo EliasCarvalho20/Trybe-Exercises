@@ -25,12 +25,10 @@ for (key in info) {
 }
 
 for (key in info) {
-
   if (key != "recorrente") {
     console.log(`${info[key]} e ${info2[key]}`)
   }
   else {
     console.log("Ambos recorrentes")
   }
-
 }
