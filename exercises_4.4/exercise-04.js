@@ -1,9 +1,6 @@
 function smallerIndex(number) {
 
-  let smaller = 0, index = 0;
-
-  smaller = number[0];
-  index = 0;
+  let smaller = number[0], index = 0;
 
   number.forEach((element, i) => {
     if (element < smaller) {
