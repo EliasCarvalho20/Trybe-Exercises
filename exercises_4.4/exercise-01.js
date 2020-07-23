@@ -1,28 +1,20 @@
-let info = {
-  personagem: "Margarida",
-  origem: "Pato Donald",
-  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
-};
+function Character(personagem, origem, nota) {
+  this.personagem = personagem;
+  this.origem = origem;
+  this.nota = nota;
+}
 
-let info2 = {
-  personagem: "Tio Patinhas",
-  origem: "Christmas on Bear Mountain, Dell's Four Color Comics #178",
-  nota: "O último MacPatinhas"
-};
+let info = new Character("Margarida", "Pato Donald",
+  "Namorada do personagem principal nos quadrinhos do Pato Donald");
 
-console.log(`Bem vinda, ${info.personagem}`);
+let info2 = new Character("Tio Patinhas",
+  "Christmas on Bear Mountain, Dell's Four Color Comics #178",
+  "O último MacPatinhas");
+
+console.log(`Bem vinda, ${info.personagem}\n`);
 
 info["recorrente"] = "Sim";
 info2["recorrente"] = "Sim";
-console.log(info);
-
-for (key in info) {
-  console.log("\n", key);
-}
-
-for (key in info) {
-  console.log("\n", info[key], "\n",);
-}
 
 for (key in info) {
   if (key != "recorrente") {
