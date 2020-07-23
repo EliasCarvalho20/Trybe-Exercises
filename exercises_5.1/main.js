@@ -11,8 +11,8 @@ function changeBackgroundColor() {
 changeBackgroundColor();
 
 function changeColor() {
-  let greenDiv = document.getElementsByClassName('center-content')[0];
-  greenDiv.style.backgroundColor = 'rgb(255, 255, 255)';
+  let whiteDiv = document.getElementsByClassName('center-content')[0];
+  whiteDiv.style.backgroundColor = 'rgb(255, 255, 255)';
 }
 changeColor();
 
@@ -23,8 +23,8 @@ function changeH1() {
 changeH1();
 
 function toUpperCase() {
-  let upper = document.getElementsByTagName('p')[1];
-  upper.style.textTransform = 'uppercase';
+  let upperText = document.getElementsByTagName('p')[1];
+  upperText.style.textTransform = 'uppercase';
 }
 toUpperCase();
 
