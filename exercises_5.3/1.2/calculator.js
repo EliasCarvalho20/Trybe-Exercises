@@ -1,6 +1,6 @@
 function squareNumber(num) {
   let squaredNumber = num * num;
-  console.log(`The result of squaring the number ${num} is squaredNumber`);
+  console.log(`The result of squaring the number ${num} is ${squaredNumber}`);
   return squaredNumber;
 }
 
@@ -28,7 +28,7 @@ let squareButton = document.querySelector('#square-button');
 squareButton.addEventListener('click', () => {
   let numberToSquare = document.querySelector('#square-input').value;
   resultDiv.innerText = squareNumber(numberToSquare);
-  });
+});
 
 let halfButton = document.querySelector('#half-button');
 halfButton.addEventListener('click', () => {
