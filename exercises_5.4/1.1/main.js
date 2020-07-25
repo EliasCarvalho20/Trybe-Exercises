@@ -1,21 +1,31 @@
-const DOCBODY = document.body.style;
-
 // This function is called from HTML
-function getItemFromStorage() { 
-  let back = localStorage.getItem('background-color');
-  DOCBODY.backgroundColor = back;
+function restoreStorage() {
+  DOCBODY.backgroundColor = getItemFromStorage(getProperty(1)[0]);
 
-  let text = localStorage.getItem('text-color');
-  DOCBODY.color = text;
+  DOCBODY.color = getItemFromStorage(getProperty(2)[0]);
 
-  let size = localStorage.getItem('font-size');
-  DOCBODY.style.fontSize = size;
+  DOCBODY.fontSize = getItemFromStorage(getProperty(3)[0]);
 
-  let height = localStorage.getItem('line-height');
-  DOCBODY.style.lineHeight = height;
+  DOCBODY.lineHeight = getItemFromStorage(getProperty(4)[0]);
 
-  let font = localStorage.getItem('font-family');
-  DOCBODY.style.fontFamily = font;
+  DOCBODY.fontFamily = getItemFromStorage(getProperty(5)[0]);
+}
+
+const DOCBODY = document.body.style;
+const PROPERTY = {
+  1: ['background-color', '#input-color'],
+  2: ['text-color', '#input-text'],
+  3: ['font-size', '#input-size'],
+  4: ['line-height', '#input-height'],
+  5: ['font-family', '#input-font'],
+}
+
+function getProperty(keyNumber) {
+  return PROPERTY[keyNumber];
+}
+
+function getItemFromStorage(tagName) {
+  return localStorage.getItem(tagName);
 }
 
 function saveToStorage(keyString, keyValue) {
@@ -32,26 +42,26 @@ function getValue(tagId) {
 }
 
 function changeBackGround() {
-  DOCBODY.backgroundColor = getValue('#input-color');
-  saveToStorage('background-color', getValue('#input-color'));
+  saveToStorage(getProperty(1)[0],
+    (DOCBODY.backgroundColor = getValue(getProperty(1)[1])));
 }
 
 function changeTextColor() {
-  DOCBODY.color = getValue('#input-text');
-  saveToStorage('text-color', getValue('#input-text'));
+  saveToStorage(getProperty(2)[0],
+    (DOCBODY.color = getValue(getProperty(2)[1])));
 };
 
 function changeTextSize() {
-  DOCBODY.fontSize = (getValue('#input-size') * 3) + '%';
-  saveToStorage('font-size', (getValue('#input-size') * 3) + '%');
+  saveToStorage(getProperty(3)[0],
+    (DOCBODY.fontSize = (getValue(getProperty(3)[1]) * 3) + '%'));
 };
 
 function changeLineHeight() {
-  DOCBODY.lineHeight = getValue('#input-height') + 'px';
-  saveToStorage('line-height', getValue('#input-height') + 'px');
+  saveToStorage(getProperty(4)[0],
+    (DOCBODY.lineHeight = getValue(getProperty(4)[1]) + 'px'));
 };
 
 function changeFont() {
-  DOCBODY.fontFamily = getValue('#input-font');
-  saveToStorage('font-family', getValue('#input-font'));
+  saveToStorage(getProperty(5)[0],
+    (DOCBODY.fontFamily = getValue(getProperty(5)[1])));
 };
