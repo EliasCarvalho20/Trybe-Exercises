@@ -32,6 +32,10 @@ input {
   margin-left: 5px;
 }
 
+select {
+  width: 50px;
+}
+
 .main-content {
   margin: 20px auto;
   text-align: center;
