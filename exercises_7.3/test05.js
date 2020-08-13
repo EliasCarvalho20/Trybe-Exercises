@@ -19,6 +19,6 @@ function isEqual(...obj) {
   return obj[0] === obj[1];
 }
 
-assert.equal(isEqual(obj1, obj2), true, 'true');
-assert.equal(isEqual(obj2, obj3), true, 'true');
-assert.equal(isEqual(obj1, obj3), true, 'true');
+assert.deepEqual(isEqual(obj1, obj2), true, 'true');
+assert.deepEqual(isEqual(obj2, obj3), true, 'true');
+assert.deepEqual(isEqual(obj1, obj3), true, 'true');
