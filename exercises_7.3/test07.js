@@ -1,12 +1,12 @@
 const assert = require('assert');
 
 const greaterThanTen = (array) => {
-  let results = [];
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] > 10) {
-      results.push(array[i]);
+  let results = array.filter(item => {
+    if (item > 10) {
+      return item;
     }
-  }
+  });
+
   return results;
 };
 
