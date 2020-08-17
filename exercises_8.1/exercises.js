@@ -111,20 +111,20 @@ const someBookWasReleaseOnThe80s = (book) => {
 assert.equal(someBookWasReleaseOnThe80s(books), true);
 
 
-// Exercise-06
+// Exercise-07
 const authorUnique = (book) => {
   let bornYear = [];
   let check = false;
 
-  book.forEach((item) => {
-    bornYear.push(item.author.birthYear);
-
-    if (!bornYear.includes(item.author.birthYear)) {
+  book.forEach((item) => {   
+    if (bornYear.includes(item.author.birthYear)) {
       check = true;
     }
+
+    bornYear.push(item.author.birthYear);
   });
 
   return check;
 };
 
-assert.equal(authorUnique(books), false);
+assert.equal(authorUnique(books), true);
