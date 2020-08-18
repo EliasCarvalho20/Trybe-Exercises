@@ -99,9 +99,9 @@ assert.deepStrictEqual(OrderedByReleaseYear(), books);
 
 // Exercise-05 
 const everyoneWasBornOnSecXX = (book) => {
-  return book.every((item) => item.author.birthYear <= 2000);
+  return book.every((item) => item.author.birthYear >= 1901);
 };
-assert.equal(everyoneWasBornOnSecXX(books), true);
+assert.equal(everyoneWasBornOnSecXX(books), false);
 
 
 // Exercise-06
