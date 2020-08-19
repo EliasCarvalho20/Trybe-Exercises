@@ -18,7 +18,7 @@ const PROPERTY = {
   3: ['font-size', '#input-size'],
   4: ['line-height', '#input-height'],
   5: ['font-family', '#input-font'],
-}
+};
 
 function getProperty(keyNumber) {
   return PROPERTY[keyNumber];
@@ -49,19 +49,19 @@ function changeBackGround() {
 function changeTextColor() {
   saveToStorage(getProperty(2)[0],
     (DOCBODY.color = getValue(getProperty(2)[1])));
-};
+}
 
 function changeTextSize() {
   saveToStorage(getProperty(3)[0],
     (DOCBODY.fontSize = (getValue(getProperty(3)[1]) * 3) + '%'));
-};
+}
 
 function changeLineHeight() {
   saveToStorage(getProperty(4)[0],
     (DOCBODY.lineHeight = getValue(getProperty(4)[1]) + 'px'));
-};
+}
 
 function changeFont() {
   saveToStorage(getProperty(5)[0],
     (DOCBODY.fontFamily = getValue(getProperty(5)[1])));
-};
+}
