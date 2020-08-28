@@ -11,13 +11,13 @@ const greet = (temperature) => console.log(`Hi there! Curiosity here. Right now 
 
 const handleError = (errorReason) => console.log(`Error getting temperature: ${errorReason}`);
 
-function sendMarsTemperature(onSuccess) {
+function sendMarsTemperature(onSuccess, onError) {
   setTimeout(() => {
-    const succeed = Math.random() >= 0.6;
+    const succeed = Math.random() <= 0.6;
     if (succeed) {
       onSuccess(getMarsTemperature());
     } else {
-      handleError("Robot is busy");
+      onError("Robot is busy");
     }
   }, messageDelay());
 }
