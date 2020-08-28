@@ -9,7 +9,7 @@ const myObject = {
 const fetchJoke = () => {
   fetch(API_URL, myObject)
   .then(response => response.json())
-  .then(data => console.log(data.joke))
+  .then(data => document.getElementById('jokeContainer').innerText = data.joke)
 };
 
 window.onload = () => fetchJoke();
