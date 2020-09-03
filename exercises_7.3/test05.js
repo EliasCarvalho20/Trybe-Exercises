@@ -15,10 +15,6 @@ const obj3 = {
   description: 'My Description',
 };
 
-function isEqual(...obj) {
-  return obj[0] === obj[1];
-}
-
-assert.deepEqual(isEqual(obj1, obj2), true, 'true');
-assert.deepEqual(isEqual(obj2, obj3), true, 'true');
-assert.deepEqual(isEqual(obj1, obj3), true, 'true');
+assert.deepEqual(obj1, obj2);
+assert.notDeepEqual(obj2, obj3);
+assert.notDeepEqual(obj1, obj3);

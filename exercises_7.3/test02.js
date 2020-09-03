@@ -10,6 +10,7 @@ function myRemove(arr, item) {
   return newArr;
 }
 
+assert.equal(typeof myRemove, 'function');
 assert.deepEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 4], 'true');
 assert.notDeepEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 3, 4], 'true');
 assert.deepEqual(myRemove([1, 2, 3, 4], 5), [1, 2, 3, 4], 'true');
