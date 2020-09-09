@@ -30,7 +30,7 @@ const findAnimalByAge = (age) => (
   })
 );
 
-const getAnimal = (name, age = 0) => {
+const getAnimal = (name) => {
   return findAnimalByName(name).then(list => list[0]);
 };
 

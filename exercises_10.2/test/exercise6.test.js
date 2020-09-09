@@ -8,7 +8,7 @@ describe('Testing promise - findAnimalByName', () => {
         expect(animal).toEqual({ name: 'Dorminhoco', age: 1, type: 'Dog' });
       });
     });
-  });
+  }); 
 
   describe('When the animal with the given name doesn\'t exists', () => {
     test('Returns an error', () => {
@@ -20,7 +20,7 @@ describe('Testing promise - findAnimalByName', () => {
   });
 });
 
-describe('Testing promise - findAnimalByName', () => {
+describe('Testing promise - findAnimalByAge', () => {
   describe('When the animal with the given age exists', () => {
     test('Return the animal\'s object', () => {
       expect.assertions(1);
