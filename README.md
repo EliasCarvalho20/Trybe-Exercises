@@ -49,8 +49,8 @@
 
 * __Module 10__
     - [x] 10_1: Jest First Steps
-    - [ ] 10_2: Jest - Asynchronous Tests
-    - [ ] 10_3: Jest - Simulating behaviors
+    - [x] 10_2: Jest - Asynchronous Tests
+    - [x] 10_3: Jest - Simulating behaviors
 
  ----
  ### 📚 Projects:
@@ -65,6 +65,6 @@
     - [x] Unit tests - Module 7
     - [x] Zoo functions - Module 8
     - [x] Shopping Cart - Module 9
-    - [ ] Asynchronous Jest and Mocking- Module 10
+    - [x] Asynchronous Jest and Mocking- Module 10
     
  ----
