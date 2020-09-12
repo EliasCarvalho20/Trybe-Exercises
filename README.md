@@ -51,6 +51,11 @@
     - [x] 10_1: Jest First Steps
     - [x] 10_2: Jest - Asynchronous Tests
     - [x] 10_3: Jest - Simulating behaviors
+ 
+ * __Module 11__
+    - [x] 11_1: Introduction - React
+    - [x] 11_1: 'Hello, world!' in React!
+    - [x] 11_2: React Components
 
  ----
  ### 📚 Projects:
@@ -66,5 +71,6 @@
     - [x] Zoo functions - Module 8
     - [x] Shopping Cart - Module 9
     - [x] Asynchronous Jest and Mocking- Module 10
+    - [x] Movie Cards Library Module 11
     
  ----
