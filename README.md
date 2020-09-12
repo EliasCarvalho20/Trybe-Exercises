@@ -70,7 +70,7 @@
     - [x] Unit tests - Module 7
     - [x] Zoo functions - Module 8
     - [x] Shopping Cart - Module 9
-    - [x] Asynchronous Jest and Mocking- Module 10
-    - [x] Movie Cards Library Module 11
+    - [x] Asynchronous Jest and Mocking - Module 10
+    - [x] Movie Cards Library - Module 11
     
  ----
