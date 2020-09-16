@@ -1,0 +1,20 @@
+.button-container {
+  margin: 50px auto;
+  width: 10%;
+}
+
+.button-next {
+  background-color: #2A265F;
+  border-radius: 10px;
+  border: 2px groove lightblue;
+  color: #FFF;
+  font-size: 20px;
+  height: 60px;
+  width: 180px;
+  transition: ease 1s;
+}
+
+.button-next:hover {
+  background-color: #37327e;
+  transform: scale(1.01);
+}
