@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.stored-img {
+  width: 100px;
+  margin: 20px 10px;
+}
+
+.dog-img {
+  width: 400px;
+}
