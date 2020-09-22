@@ -9,7 +9,6 @@ class Buttons extends Component {
     super();
     this.changeElement = this.changeElement.bind(this);
     this.increasePosition = this.increasePosition.bind(this);
-    this.updateElement = this.updateElement.bind(this);
 
     this.state = {
       currentElement: 'All',
@@ -17,22 +16,21 @@ class Buttons extends Component {
     };
   }
 
-  updateElement(pokeElement) {
-    this.setState({ currentElement: pokeElement })
-    this.changeElement();
-  }
-
-  changeElement() { 
-    const pokeElement = this.state.currentElement;
-
+  changeElement(pokeElement) {
     if (pokeElement === 'All') {
-      this.setState({ currentPosition: [0] });
+      this.setState({
+        currentPosition: [0],
+        currentElement: pokeElement
+      });
     } else {
       const elementIndex = pokemons.reduce((acc, item, index) => {
         return item.type === pokeElement ? acc.concat(index) : acc;
       }, []);
 
-      this.setState({ currentPosition: elementIndex });
+      this.setState({
+        currentPosition: elementIndex,
+        currentElement: pokeElement
+      });
     }
   }
 
@@ -64,7 +62,7 @@ class Buttons extends Component {
         <div className="element-container">{
           elementType.map((element) => (
             <button key={element} className="poke-button element-button" type="button"
-              onClick={() => this.updateElement(element)}>{element}</button>
+              onClick={() => this.changeElement(element)}>{element}</button>
           ))
         }</div>
       </div>
