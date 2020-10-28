@@ -20,20 +20,16 @@ class App extends Component {
     this.setState((state) => ({ listTodo: [...state.listTodo, todo] }));
   }
 
-  removeTodo() {
-    const { listTodo, selected } = this.state;
-    const text = selected;
-    let filteredArray = listTodo.filter(item => item !== text);
-
-    this.setState({
-      selected: '',
-      listTodo: filteredArray,
-    });
-  }
-
   isSelected({ target }) {
     const value = target.innerText;
     this.setState({ selected: value });
+  }
+
+  removeTodo() {
+    this.setState({
+      listTodo: this.state.listTodo.filter(item => item !== this.state.selected),
+      selected: '',
+      });
   }
 
   render() {

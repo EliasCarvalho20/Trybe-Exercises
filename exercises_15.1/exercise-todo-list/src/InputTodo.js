@@ -35,6 +35,7 @@ class InputTodo extends Component {
         <input id="btnAdd" type="button" value="Adicionar" onClick={() => this.addItem(textTodo, addTodo)} />
         <input
           data-testid="id-remove"
+          id="btnRmv"
           type="button"
           value="Remover"
           disabled={ selected === '' ? true : false }
